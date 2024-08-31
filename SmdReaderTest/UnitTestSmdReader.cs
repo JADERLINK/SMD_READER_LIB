@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using SMD_READER_API;
+using SMD_READER_LIB;
 using System.IO;
 using System.Text;
 
@@ -14,7 +14,7 @@ namespace SmdReaderTest
         [TestMethod]
         public void TestMethodVersion1()
         {
-            //verifica se o primeira linha valida começa com "version"
+            //verifica se a primeira linha valida começa com "version"
             //o objeto smd não é nulo
             //as lista internas não são nulas, porem o "count" é 0, nesse caso
 

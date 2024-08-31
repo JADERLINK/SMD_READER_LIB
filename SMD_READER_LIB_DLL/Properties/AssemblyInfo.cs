@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // As informações gerais sobre um assembly são controladas por
 // conjunto de atributos. Altere estes valores de atributo para modificar as informações
 // associada a um assembly.
-[assembly: AssemblyTitle("SMD_READER_API")]
-[assembly: AssemblyDescription("SMD_READER_API")]
+[assembly: AssemblyTitle("SMD_READER_LIB")]
+[assembly: AssemblyDescription("SMD_READER_LIB")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SMD_READER_API")]
-[assembly: AssemblyCopyright("Copyright ©JADERLINK  2023")]
+[assembly: AssemblyCompany("JADERLINK")]
+[assembly: AssemblyProduct("SMD_READER_LIB")]
+[assembly: AssemblyCopyright("Copyright ©JADERLINK 2024")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

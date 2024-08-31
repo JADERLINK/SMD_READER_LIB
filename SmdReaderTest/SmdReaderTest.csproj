@@ -56,9 +56,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SMD_READER_API\SMD_READER_API.csproj">
+    <ProjectReference Include="..\SMD_READER_API\SMD_READER_LIB_DLL.csproj">
       <Project>{7de29ed4-5835-4351-8902-3a7b18a79886}</Project>
-      <Name>SMD_READER_API</Name>
+      <Name>SMD_READER_LIB_DLL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

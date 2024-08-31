@@ -14,30 +14,44 @@ namespace test
         {
             Console.WriteLine("start");
 
+            SMD_READER_LIB.SMD smd = null;
+            StreamReader stream = null;
+
             if (args.Length >= 1 && File.Exists(args[0]))
             {
-                SMD_READER_API.SMD smd = null;
-
-                var stream = new FileInfo(args[0]).OpenText();
                 try
                 {
-                    smd = SMD_READER_API.SmdReader.Reader(stream);
+                    stream = new FileInfo(args[0]).OpenText();
                 }
                 catch (Exception ex)
                 {
-                    stream.Close();
-                    Console.WriteLine(ex);
+                    Console.WriteLine("Error1: " + ex);
                 }
 
-                if (smd != null)
+                if (stream != null)
                 {
-                    Console.WriteLine("smd.Nodes.Count: " + smd.Nodes.Count);
-                    Console.WriteLine("smd.Times.Count: " + smd.Times.Count);
-                    Console.WriteLine("smd.Triangles.Count: " + smd.Triangles.Count);
-                    Console.WriteLine("smd.VertexAnimation.Count: " + smd.VertexAnimation.Count);
-                }
+                    try
+                    {
+                        smd = SMD_READER_LIB.SmdReader.Reader(stream);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error2: " + ex);
+                    }
+                    finally
+                    {
+                        stream.Close();
+                    }
 
-                int a = 0;
+                    if (smd != null)
+                    {
+                        Console.WriteLine("smd.Nodes.Count: " + smd.Nodes.Count);
+                        Console.WriteLine("smd.Times.Count: " + smd.Times.Count);
+                        Console.WriteLine("smd.Triangles.Count: " + smd.Triangles.Count);
+                        Console.WriteLine("smd.VertexAnimation.Count: " + smd.VertexAnimation.Count);
+                    }
+
+                }
             }
             else 
             {

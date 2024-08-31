@@ -7,8 +7,8 @@
     <ProjectGuid>{7DE29ED4-5835-4351-8902-3A7B18A79886}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SMD_READER_API</RootNamespace>
-    <AssemblyName>SMD_READER_API</AssemblyName>
+    <RootNamespace>SMD_READER_LIB</RootNamespace>
+    <AssemblyName>SMD_READER_LIB</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,8 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SmdReader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <Import Project="..\SMD_READER_LIB\SMD_READER_LIB.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
