@@ -8,7 +8,7 @@ C-Sharp SMD Reader LIB (StudioModel Data)
 <br>
 <br>Código destinado para carregar arquivo .SMD (StudioModel Data) e converter para uma classe.
 <br>Fiz esse código, pois não achei um que pudesse usar, então ele é o mais simples possível.
-<br>Os códigos de teste unitário, é a primeira vez que faço, eles tem como objetivo verificar as situações de exception (arquivo fora do layout) e conferir se os valores estão sendo atribuídos corretamente nos campos.
+<br>Os códigos de teste unitário, é a primeira vez que faço, eles visam verificar as situações de exception (arquivo fora do layout) e conferir se os valores estão sendo atribuídos corretamente nos campos.
 <br>
 <br> * O código principal está em "SMD_READER_LIB\SmdReader.cs", copie esse arquivo para o seu projeto ou gere um arquivo .dll.
 <br> * Em "SmdReaderTest\UnitTestSmdReader.cs" são os testes unitários;

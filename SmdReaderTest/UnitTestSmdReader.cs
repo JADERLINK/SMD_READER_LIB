@@ -67,7 +67,7 @@ end
         public void TestMethodThrowNotVersion1()
         {
             // se o primeiro conteudo valido for diferente de "version"
-            // será gerado uma ArgumentException
+            // será gerado uma SmdException
 
             byte[] data = Encoding.UTF8.GetBytes("error");
             var reader = new StreamReader(new MemoryStream(data), Encoding.UTF8);
@@ -76,7 +76,7 @@ end
             {
                 SmdReader.Reader(reader);
             }
-            catch (ArgumentException)
+            catch (SmdException)
             {
                 return;
             }
@@ -88,7 +88,7 @@ end
         public void TestMethodThrowEmpty()
         {
             // se o conteudo for vazio
-            // será gerado uma ArgumentException
+            // será gerado uma SmdException
 
             byte[] data = Encoding.UTF8.GetBytes("");
             var reader = new StreamReader(new MemoryStream(data), Encoding.UTF8);
@@ -97,7 +97,7 @@ end
             {
                 SmdReader.Reader(reader);
             }
-            catch (ArgumentException)
+            catch (SmdException)
             {
                 return;
             }
@@ -109,7 +109,7 @@ end
         public void TestMethodThrowInvalidCommand()
         {
             // se um dos comando for invalido
-            // será gerado uma ArgumentException
+            // será gerado uma SmdException
 
             byte[] data = Encoding.UTF8.GetBytes("version 1\r\nerror");
             var reader = new StreamReader(new MemoryStream(data), Encoding.UTF8);
@@ -118,7 +118,7 @@ end
             {
                 SmdReader.Reader(reader);
             }
-            catch (ArgumentException)
+            catch (SmdException)
             {
                 return;
             }
@@ -130,7 +130,7 @@ end
         public void TestMethodThrowNotEndTag()
         {
             // se não tiver a tag end
-            // será gerado um ArgumentException
+            // será gerado um SmdException
 
             byte[] data = Encoding.UTF8.GetBytes("version 1\r\nnodes\r\n");
             var reader = new StreamReader(new MemoryStream(data), Encoding.UTF8);
@@ -139,7 +139,7 @@ end
             {
                 SmdReader.Reader(reader);
             }
-            catch (ArgumentException)
+            catch (SmdException)
             {
                 return;
             }
